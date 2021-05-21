@@ -47,11 +47,11 @@ export class PageComponent
   extends BaseComponent<HTMLUListElement>
   implements Composable
 {
-  constructor(private pageItemConstructor: SectionContainerConstructor) {
+  constructor(private PageItemConstructor: SectionContainerConstructor) {
     super('<ul calss="page"></ul>');
   }
   addChild(section: Component) {
-    const item = new this.pageItemConstructor();
+    const item = new this.PageItemConstructor();
     item.addChild(section);
     item.attatchTo(this.element, 'beforeend');
     item.setOnCloseListener(() => {
