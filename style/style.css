@@ -200,3 +200,27 @@ body {
 .page-item__controls {
   padding-right: 0.5em;
 }
+
+/* --- Drag and Drop --- */
+/* class 밑의 모든 태그를 선택하는 것은 사실 그렇게 좋은 방법은 아니고, 다른 방법 있지만 여기서는 일단 이렇게 */
+.mute_children * {
+  pointer-events: none;
+}
+
+.dragged {
+  animation: drag_start 250ms;
+  opacity: 0.2;
+}
+
+@keyframes drag_start {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.drop-area {
+  border: 2px solid var(--accent-color);
+}
