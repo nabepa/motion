@@ -204,6 +204,7 @@ body {
 }
 
 .page-item__title {
+  font-size: 1.8rem;
   color: var(--text-accent-color);
 }
 
@@ -252,7 +253,7 @@ body {
 
 .todo__list,
 .todo-label {
-  padding: 1em;
+  padding: 0.2em;
   color: var(--smokywhite);
 }
 
@@ -261,7 +262,7 @@ body {
   pointer-events: none;
 }
 
-.lifted {
+.dragged {
   animation: drag_start 250ms;
   opacity: 0.4;
 }
